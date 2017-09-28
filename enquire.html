@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Great Dividing Rail Enquire Page</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Interstate Train Ticket Purchase"/>
+	<meta name="keyword"     content="Part 2 Web Application Assignment, Index Page"/>
+	<meta name="author"      content="Peter Micevski"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="styles/style.css" rel="stylesheet"/>
+	<script src="part2.js" ></script>
+</head>
+<body>
+
+<article>
+<header>
+	<h1>Great Dividing Rail</h1>
+</header>
+	<img class="logo" src="images/train5.png" alt="great diving logo" >
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="products.html">Tickets</a></li>
+			<li><a href="enquire.html">Enquirys</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="enhancements.html">Enhancements</a></li>
+		</ul>
+	</nav>
+<section id="esec">
+<h2>Enquire</h2>
+<form id="efield" action="payment.html">
+<fieldset id="person">
+	<legend>Name</legend>
+	<p><label for="custfirst">First Name:</label>
+		<input 
+			type="text" 
+			name="custfirst" 
+			id="custfirst" 
+			maxlength="25"		
+			required="required"
+			pattern="[a-zA-Z]+"/>
+	</p>
+	<p><label for="custlast">Last Name:</label>
+		<input 
+			type="text" 
+			name="custlast" 
+			id="custlast" 
+			maxlength="25"		
+			required="required"
+			pattern="[a-zA-Z]+"/>
+	</p>
+	<p><label for="email">Email Address:</label>
+		<input 
+			type="email" 
+			name="email" 
+			id="email"
+			required="required"/>
+	</p>
+</fieldset>
+<fieldset id="address">
+	<legend>Address</legend>
+	<p><label for="street">Street Address:</label>
+		<input 
+			type="text" 
+			name="street" 
+			id="street"
+			maxlength="40"
+			required="required"/>
+	</p>
+	<p><label for="suburb">Suburb/Town:</label>
+			<input 
+			type="text" 
+			name="suburb" 
+			id="suburb"
+			maxlength="20"
+			required="required"/>
+	</p>
+</fieldset>
+<fieldset id="state">
+	<label>State:</label>
+		<select name="state" required="required">
+			<option value="">Please Select</option>
+			<option value="vic" id="vic">VIC</option>
+			<option value= "nsw" id="nsw">NSW</option>
+			<option value= "qld" id="qld">QLD</option>
+			<option value= "nt" id="nt">NT</option>
+			<option value= "wa" id="wa">WA</option>
+			<option value= "sa" id="sa">SA</option>
+			<option value= "tas" id="tas">TAS</option>
+			<option value= "act" id="act">ACT</option>
+		</select>
+</fieldset>
+<fieldset>
+	<label for="post">Post Code:</label>
+	<input type="text" name="post" id="post" required="required" pattern="\d{4}"/>
+</fieldset>
+<fieldset id="contact">
+	<legend>Preferred Contact</legend>
+		<label><input type="radio" name="contact" value="eEmail" id="eEmail" checked="checked" />Email</label>
+		<label><input type="radio" name="contact" value="pos" id="pos"/>Post</label>
+		<label><input type="radio" name="contact" value="phon" id="phon"/>Phone</label>
+</fieldset>
+<fieldset>
+	<legend>Phone Number</legend>
+		<label for="phone">Phone Number
+			<input type="text" placeholder="(##)####-####" name="phone" id="phone" required="required" pattern="^(\d{2})\d{4}-\d{4}"/>
+		</label>
+</fieldset>
+<fieldset id="service">
+	<legend>Product Services</legend>
+		<label>Product/Service</label>
+			<select name="service" >
+				<option value="none">Please Select</option>
+				<option value = "destination" id="destination" >Destinations</option>
+				<option value = "tickets" id="tickets" >Tickets</option>
+				<option value = "services" id="services" >Services</option>
+				<option value = "other" id="other" >Other</option>
+			</select>
+</fieldset>
+<fieldset name="issues" id="issues">
+	<legend>Issue</legend>
+	<label for="bev">Food/Beverages</label>
+	<input type="checkbox" name="bev" value="bev" id="bev" checked="checked" />
+	<label for="wifi">Wi-Fi</label>
+	<input type="checkbox" name="wifi" value="wifi" id="wifi"/>
+	<label for="activ">Activities</label>
+	<input type="checkbox" name="activ" value="activ" id="activ"/>
+	<label for="tick">Ticketing</label>
+	<input type="checkbox" name="tick" value="tick" id="tick"/>
+	<label for="des">Destinations</label>
+	<input type="checkbox" name="des" value="des" id="des"/>
+</fieldset>
+<h2>Tickets</h2>
+<fieldset id="trip">
+	<legend>Trips</legend>
+	<label for="1Trip" >1 Trip - From $56</label>
+	<input type="checkbox" name="trips[]" value="1Trip" id="1Trip" checked="checked" />
+	<label for="2Trips">2 Trips - From $112</label>
+	<input type="checkbox" name="trips[]" value="2Trips" id="2Trips"/>
+	<label for="3Trips">3 Trips - From $147</label>
+	<input type="checkbox" name="trips[]" value="3Trips" id="3Trips"/>
+	<label for="4Trips">4 Trips - From $187</label>
+	<input type="checkbox" name="trips[]" value="4Trips" id="4Trips"/>
+	<label for="5Trips">5 Trips - From $217</label>
+	<input type="checkbox" name="trips[]" value="5Trips" id="5Trips"/>
+</fieldset>
+<fieldset>
+	<p>
+		<label for="adults">Adults</label>
+		<input type="text" id="adults" name="adults" maxlength="3" size="3" />
+	<p>
+		<label for="concession">Seniors/Concession</label>
+		<input type="text" id="concession" name="concession" maxlength="3" size="3" pattern="^[0-9]\d*$" />
+	</p>
+	<p>
+		<label for="under">Under18</label>
+		<input type="text" id="under" name="under" maxlength="3" size="3" />
+	</p>
+</fieldset>
+<fieldset id="travel">
+	<legend>Travel Class</legend>
+		<label><input type="radio" name="rating" value="standard" id="standard" checked="checked" />Standard</label>
+		<label><input type="radio" name="rating" value="first" id="first"/>First Class</label>
+</fieldset>
+<fieldset >			
+		<p>
+			<label>Discription of Issue<br />
+			<textarea id="comments" name="comments"  rows="8" cols="50" placeholder="Please inform us on what you would like clarified...">
+			</textarea>
+			</label>
+		</p>
+</fieldset>
+
+<p class="a">
+	<input type="submit" value="Pay Now"/>
+	<input type="reset" value="Reset Form"/>
+</p>
+</form>
+</section>
+<footer>
+	<p>Great Dividing Rail&#169;</p>
+</footer>
+</article>
+</body>
+</html>

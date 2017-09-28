@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Great Dividing Rail Payment Page</title>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Interstate Train Ticket Purchase"/>
+	<meta name="keyword"     content="Part 2 Web Application Assignment, Payment"/>
+	<meta name="author"      content="Peter Micevski"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="styles/style.css" rel="stylesheet"/>
+	<script src="part2c.js" ></script>
+</head>
+<body>
+<header>
+	<h1>Great Dividing Rail</h1>
+	<img class="logo" src="images/train5.png" alt="great diving logo" >
+</header>
+
+<article>
+
+<section id="esec">
+
+<h2>Booking Confirmation</h2>
+
+<form id="bookform" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" >
+<fieldset>
+	<legend><h3>Trip Booking</h3></legend>
+	<p>Name: <span id="confirm_name"></span></p>
+	<p>Adress: <span id="confirm_add"></span></p>
+	<p>Email: <span id="confirm_email"></span></p>
+	<p>Phone Number: <span id="confirm_num"></span></p>
+	<p>Preferred Contact: <span id="confirm_con"></span></p>
+	<p>Product Service: <span id="confirm_serv"></span></p>
+	<p>Issue: <span id="confirm_iss"></span></p>
+	<p>Trips: <span id="confirm_trips"></span></p>
+	<p>Ticket Type: <span id="confirm_tic"></span></p>
+	<p>Travel Class: <span id="confirm_class"></span></p>
+	<p>Total Cost: <span id="confirm_cost"></span></p>
+	<p>Comments: <span id="confirm_com"></span></p>
+	<input type="hidden" name="firstname" id="custfirst" />
+	<input type="hidden" name="lastname" id="custlast" />
+	<input type="hidden" name="street" id="street" />
+	<input type="hidden" name="suburb" id="suburb" />
+	<input type="hidden" value="state" name="state" id="state" />
+	<input type="hidden" name="post" id="post" />
+	<input type="hidden" name="email" id="email" />
+	<input type="hidden" name="phone" id="phone" />
+	<input type="hidden" value="contact" name="contact" id="contact" />
+	<input type="hidden" value="service" name="service" id="service" />
+	<input type="hidden" value="issues" name="issues" id="issues" />
+	<input type="hidden" value="trip" name="trip" id="trip" />
+	<input type="hidden" name="concession" id="concession" />
+	<input type="hidden" value="travel" name="travel" id="travel" />
+	<input type="hidden" name="cost" id="cost" />
+</fieldset>
+<fieldset>
+	<legend><h3>Payment Details</h3></legend>
+	<p><label for="cardtype">Credit Card Type</label>
+			<select name="cardtype" id="cardtype" >
+				<option value="none">Please Select</option>
+				<option value = "visa" id="visa" >Visa</option>
+				<option value = "mastercard" id="mastercard" >MasterCard</option>
+				<option value = "amex" id="amex" >American Express</option>
+			</select>
+	</p>
+	<p><label for="cardname">Name on Credit Card:</label>
+		<input 
+			type="text" 
+			name="cardname" 
+			id="cardname" 
+			maxlength="40"		
+			required="required"
+			pattern="[a-zA-Z]+"/>
+	</p>
+	<p><label for="cardnum">Credit Card Number:</label>
+		<input 
+			type="text" 
+			name="cardnum" 
+			id="cardnum"
+			pattern=".{15,16}"
+			required="required"/>
+	</p>
+		<p><label for="cardex">Credit Card Expity Date:</label>
+		<input 
+			type="text" 
+			name="cardex" 
+			id="cardex" 
+			maxlength="5"
+			placeholder="mm/yy"
+			required="required"
+			pattern="^\d{2}/\d{2}"/>
+	</p>
+	<p><label for="ccv">Credit Card Number:</label>
+		<input 
+			type="text" 
+			name="ccv" 
+			id="ccv" 
+			pattern="^[0-9]\d*$"
+			maxlength="4"		
+			required="required"/>
+	</p>
+</fieldset>
+<fieldset>	
+	<p><label for="date">Preferred Date</label>
+		<input type="text" id="date" name="bookday" required="required" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Format dd/mm/yyyy" maxlength="10" size="10" />
+		</p>
+		<input type="submit" value="Check Out" />
+		<button type="button" id="cancelButton">Cancel</button>
+</fieldset>
+
+</form>
+</section>
+</article>
+</body>
+</html>

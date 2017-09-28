@@ -1,0 +1,231 @@
+/* 
+filename: Peter Micevski
+author: Peter Micevski
+created: 24/3/2017
+last modified: 28/03/2017
+description: CSS Style Sheet for COS10011 Assignment Part 1 (Train Ticket Website) 
+*/
+/*index page*/
+* { 
+	font-family: book antiqua, helvetica, sans-serif;
+	}
+body {
+	margin:0;
+	}
+article {    
+	height: 600px;
+	background: linear-gradient(to bottom, #4fc3f7 0%, #ffffff 100%);
+	}
+h1 {
+	color: #00897b;
+	font-size: 4em;
+	float: left;
+	padding-left: 10%;
+	}
+header {
+	margin: 0em;
+	padding: .1em;
+	border-width: thin;
+	}
+nav {
+	text-align: center;
+	float: left;
+	padding: 1px;
+	margin: 20px;}
+nav ul li {
+	display: inline-block;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0em 2.2em;
+	border-radius: 25px;
+	border: 4px solid #f44336;
+	background-color: #00897b;
+	}
+nav ul li a {
+	text-decoration: none;
+	color:   #e0e0e0  ;
+	}
+.logo {
+	float: right;
+	padding-right:15%;
+	}
+.fit {
+	max-width: 100%;
+	float: right;
+	margin: 3% 17% 0 0;
+	border-radius: 25px;
+	border: 4px solid #f44336;
+	}
+#isec { 
+	float: left;
+	width: 30%;
+	text-align: justify;
+	padding:20px;
+	margin: 3% 0 0 10%;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;}
+
+/*products page*/
+h1.x {
+	font-variant: small-caps;
+	}
+#ptables { /*ptables, th, caption is table*/
+	float: right;
+	border-radius: 25px;
+	background-color: #EEAD0E;
+	padding: 8px;
+	margin: 0 2% 2% 0;
+	}
+th {
+	color: white;
+	background-color: #22316C;
+	border-radius: 15px;
+	}
+caption.pt {
+	color: white;
+	background-color: #22316C;
+	border-radius: 15px;
+	}
+
+#psecA { /*grouping of psec1/2 in a section*/
+	float:left;
+	margin-left:25px;
+	}
+#psec1 {
+	width:20%;
+	float:left;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin-left: 5%;
+	padding-left: 20px;
+	}
+#psec2 {
+	width:20%;
+	float: right;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin: 2%;
+	padding-left: 15px;
+	}
+
+#psec3 { /*main product content*/
+	float:left;
+	width:35%;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin: 0 0 25px 25px;
+	padding: 20px;
+	}
+	
+aside { 
+	float: right;
+	width:25%;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin-right: 2%;
+	padding: 20px;
+	}
+.tik {
+	float: left;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	margin: 0 0 2% 2%;
+	}
+	
+/* enquire page */
+#esec {
+	clear:both;
+	width:40%;
+	border-radius: 25px;
+	margin-left: 30%;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	}
+fieldset{
+	border: none;
+	}
+/*about page*/
+#asec {
+	width:20%;
+	float: left;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin: 2% 0 0 25%;
+	padding: 20px;
+	}
+.me {
+	float: right;
+	margin: 2% 25% 0 0;
+	border: 8px solid #f44336;
+	border-style: double;
+	}
+.asect { /*table*/
+	width: 50%;
+	clear:both;
+	margin: 10% 0 0 25%;
+	background-color: #f9e4ae;
+	}
+#asec1 {
+	width:20%;
+	float: left;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin: 2% 0 2% 20%;
+	padding: 20px;
+	}
+#asec2 {
+	width:20%;
+	float: right;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin: 2% 20% 2% 0;
+	padding: 20px;
+	}
+#asec3 {
+	
+	clear: both;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	margin: 2%;
+	padding: 20px;
+	}
+dt {
+	float: left;
+	clear: left;
+	text-align: right;
+	padding: 10px;
+	}
+dd {
+	padding: 10px 10px 10px 100px;
+	}
+/*enhancements page*/
+.ensec {
+	float: right;
+	margin: 5%;
+	padding:2%;
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	background-color:  #ffcd54;
+	}
+
+footer.p {
+	border-radius: 25px;
+	border: 4px solid  #f44336;
+	margin: 25px;
+	background-color: #00897b;
+	color: #e0e0e0;
+	}
+footer { 
+	clear: both;
+	text-align: center;
+	} 	
+
